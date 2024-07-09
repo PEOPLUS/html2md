@@ -306,13 +306,13 @@ abstract class _CommonRules {
         getStyleOption('strongDelimiter');
   });
 
-  static final Rule strike = Rule('strike', filters: ['strike', 's', 'del'],
+  static final Rule strike = Rule('s', filters: ['strike', 's', 'del'],
       replacement: (content, node) {
     if (content.trim().isEmpty) return '';
     return '~~' + content + '~~';
   });
 
-  static final Rule unrderline = Rule('underline', filters: ['u', 'underline'],
+  static final Rule unrderline = Rule('u', filters: ['u', 'underline'],
       replacement: (content, node) {
     if (content.trim().isEmpty) return '';
     return '__' + content + '__';
