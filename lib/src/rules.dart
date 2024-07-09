@@ -19,6 +19,7 @@ final _commonMarkRules = [
   _CommonRules.emphasis,
   _CommonRules.strong,
   _CommonRules.strike,
+  _CommonRules.unrderline,
   _CommonRules.code,
   _CommonRules.image,
   _TableRules.tableCell,
@@ -309,6 +310,12 @@ abstract class _CommonRules {
       replacement: (content, node) {
     if (content.trim().isEmpty) return '';
     return '~~' + content + '~~';
+  });
+
+  static final Rule unrderline = Rule('underline', filters: ['u', 'underline'],
+      replacement: (content, node) {
+    if (content.trim().isEmpty) return '';
+    return '__' + content + '__';
   });
 
   static final Rule code = Rule('code', filterFn: (node) {
