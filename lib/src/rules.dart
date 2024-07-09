@@ -315,7 +315,9 @@ abstract class _CommonRules {
   static final Rule unrderline = Rule('u', filters: ['u', 'underline'],
       replacement: (content, node) {
     if (content.trim().isEmpty) return '';
-    return 'ins' + content + 'ins';
+    return getStyleOption('underlineDelimiter') +
+        content +
+        getStyleOption('underlineDelimiter');
   });
 
   static final Rule code = Rule('code', filterFn: (node) {

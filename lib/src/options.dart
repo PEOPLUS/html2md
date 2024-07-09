@@ -6,6 +6,7 @@ final _styleMap = <String, _StyleOption>{
   'fence': _StyleOption(['```', '~~~']),
   'emDelimiter': _StyleOption(['_', '*']),
   'strongDelimiter': _StyleOption(['**', '__']),
+  'underlineDelimiter': _StyleOption(['***', '___']),
   'linkStyle': _StyleOption(['inlined', 'referenced']),
   'linkReferenceStyle': _StyleOption(['full', 'collapsed', 'shortcut']),
   'br': _StyleOption(['  ']),
