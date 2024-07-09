@@ -293,17 +293,19 @@ abstract class _CommonRules {
   static final Rule emphasis =
       Rule('emphasis', filters: ['em', 'i'], replacement: (content, node) {
     if (content.trim().isEmpty) return '';
-    return getStyleOption('emDelimiter') +
-        content +
-        getStyleOption('emDelimiter');
+    return '_' + content + '_';
+    // return getStyleOption('emDelimiter') +
+    //     content +
+    //     getStyleOption('emDelimiter');
   });
 
   static final Rule strong =
       Rule('strong', filters: ['strong', 'b'], replacement: (content, node) {
     if (content.trim().isEmpty) return '';
-    return getStyleOption('strongDelimiter') +
-        content +
-        getStyleOption('strongDelimiter');
+    return '*' + content + '*';
+    // return getStyleOption('strongDelimiter') +
+    //     content +
+    //     getStyleOption('strongDelimiter');
   });
 
   static final Rule strike = Rule('s', filters: ['strike', 's', 'del'],
@@ -315,9 +317,10 @@ abstract class _CommonRules {
   static final Rule unrderline = Rule('u', filters: ['u', 'underline'],
       replacement: (content, node) {
     if (content.trim().isEmpty) return '';
-    return getStyleOption('underlineDelimiter') +
-        content +
-        getStyleOption('underlineDelimiter');
+    return '!' + content + '!';
+    // return getStyleOption('underlineDelimiter') +
+    //     content +
+    //     getStyleOption('underlineDelimiter');
   });
 
   static final Rule code = Rule('code', filterFn: (node) {
